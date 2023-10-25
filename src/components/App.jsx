@@ -14,8 +14,6 @@ export class App extends React.Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
-    name: '',
-    number: '',
   };
 
   getFilterContacts = () => {
@@ -44,6 +42,7 @@ export class App extends React.Component {
           contacts: [newContact, ...this.state.contacts],
         });
   };
+
   handleDeleteContact = id => {
     this.setState(prev => ({
       contacts: prev.contacts.filter(contact => contact.id !== id),

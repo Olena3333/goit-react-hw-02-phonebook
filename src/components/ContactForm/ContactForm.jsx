@@ -38,7 +38,6 @@ export class ContactForm extends React.Component {
     onAddContact(newContact);
 
     this.setState({
-      contacts: [newContact, ...contacts],
       name: '',
       number: '',
     });
