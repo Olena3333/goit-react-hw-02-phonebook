@@ -6,7 +6,7 @@ import { StyledButton } from '../App.styled';
 export class ContactForm extends React.Component {
   static propTypes = {
     onAddContact: propTypes.func.isRequired,
-    contacts: propTypes.array.isRequired,
+    // contacts: propTypes.array.isRequired,
   };
 
   state = {
@@ -23,14 +23,13 @@ export class ContactForm extends React.Component {
     e.preventDefault();
 
     const { name, number } = this.state;
-    const { contacts, onAddContact } = this.props;
+    const { onAddContact } = this.props;
 
     const newContact = {
       number: number.trim(),
       name: name.trim(),
       id: nanoid(),
     };
-    console.log(this.state);
     if (!name.trim()) {
       return;
     }
