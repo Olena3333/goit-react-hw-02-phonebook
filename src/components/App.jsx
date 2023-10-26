@@ -57,7 +57,7 @@ export class App extends React.Component {
 
         <ContactForm
           onAddContact={this.handleAddContact}
-          contacts={this.state.contacts}
+          // contacts={this.state.contacts}
         />
 
         <h2>Contacts</h2>
